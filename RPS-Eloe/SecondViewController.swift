@@ -20,6 +20,15 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if AppDelegate.myModel.player2Choice == .None {
+            p2LBL.text = "Make a Choice"
+        }
+        else {
+            p2LBL.text = "Selection made: \(AppDelegate.myModel.player2Choice)"
+        }
+    }
+    
     @IBOutlet weak var p2LBL: UILabel!
 
     @IBAction func p2RockBTN(_ sender: UIButton) {

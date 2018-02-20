@@ -20,8 +20,17 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if AppDelegate.myModel.player1Choice == .None {
+            p1LBL.text = "Make a Choice"
+        }
+        else {
+            p1LBL.text = "Selection made: \(AppDelegate.myModel.player1Choice)"
+        }
+    }
+    
     @IBOutlet weak var p1LBL: UILabel!
-
+    
     @IBAction func p1RockBTN(_ sender: UIButton) {
         p1LBL.text = "ROCK"
         AppDelegate.myModel.choosePlayer1(pick: .Rock)
