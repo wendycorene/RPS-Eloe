@@ -22,6 +22,8 @@ class ResultsView: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        p1Wins.text = "Player 1 has won \(AppDelegate.myModel.p1WinCount) times"
+        p2Wins.text = "Player 2 has won \(AppDelegate.myModel.p2WinCount) times"
         if AppDelegate.myModel.haveResult() {
             player1Selection.text = "Player 1 chose \(AppDelegate.myModel.player1Choice)"
             player2Selection.text = "Player 2 chose \(AppDelegate.myModel.player2Choice)"
@@ -36,6 +38,8 @@ class ResultsView: UIViewController {
     @IBOutlet weak var player1Selection: UILabel!
     @IBOutlet weak var resetLBL: UILabel!
     @IBOutlet weak var player2Selection: UILabel!
+    @IBOutlet weak var p1Wins: UILabel!
+    @IBOutlet weak var p2Wins: UILabel!
     
     @IBAction func resetBTN(_ sender: UIButton) {
         AppDelegate.myModel.reset()
@@ -48,5 +52,7 @@ class ResultsView: UIViewController {
         var winner: String
         winner = AppDelegate.myModel.winner()
         resetLBL.text = winner
+        p1Wins.text = "Player 1 has won \(AppDelegate.myModel.p1WinCount) times"
+        p2Wins.text = "Player 2 has won \(AppDelegate.myModel.p2WinCount) times"
     }
 }

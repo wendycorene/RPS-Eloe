@@ -15,7 +15,8 @@ class ChoiceClass {
         case Scissors}
     var player1Choice: Choice = .None
     var player2Choice: Choice = .None
-    //var winnerString: String = ""
+    var p1WinCount: Int = 0
+    var p2WinCount: Int = 0
 
     func reset(){
         player1Choice = .None
@@ -52,37 +53,47 @@ class ChoiceClass {
                 case .None:
                     return "It's a tie!"
                 default:
+                    p2WinCount += 1
                     return "Player 2 wins!"
             }
         case .Rock:
             switch player2Choice {
             case .None:
+                p1WinCount += 1
                 return "Player 1 wins!"
             case .Rock:
                 return "It's a tie!"
             case .Paper:
+                p2WinCount += 1
                 return "Player 2 wins!"
             case .Scissors:
+                p1WinCount += 1
                 return "Player 1 wins!"
             }
         case .Paper:
             switch player2Choice {
             case .None:
+                p1WinCount += 1
                 return "Player 1 wins!"
             case .Rock:
+                p1WinCount += 1
                 return "Player 1 wins!"
             case .Paper:
                 return "It's a tie!"
             case .Scissors:
+                p2WinCount += 1
                 return "Player 2 wins!"
             }
         case .Scissors:
             switch player2Choice {
             case .None:
+                p1WinCount += 1
                 return "Player 1 wins!"
             case .Rock:
+                p2WinCount += 1
                 return "Player 2 wins!"
             case .Paper:
+                p1WinCount += 1
                 return "Player 1 wins!"
             case .Scissors:
                 return "It's a tie!"
