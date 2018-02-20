@@ -84,3 +84,11 @@ func winner () -> String {
         }
     }
 }
+
+func choosePlayer1 (pick: Choice) {
+    player1Choice = pick
+}
+
+func choosePlayer2 (pick: Choice) {
+    player2Choice = pick
+}
