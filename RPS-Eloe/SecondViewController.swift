@@ -22,5 +22,14 @@ class SecondViewController: UIViewController {
 
     @IBOutlet weak var p2LBL: UILabel!
 
+    @IBAction func p2RockBTN(_ sender: UIButton) {
+        p2LBL.text = "ROCK"
+    }
+    @IBAction func p2PaperBTN(_ sender: UIButton) {
+        p2LBL.text = "PAPER"
+    }
+    @IBAction func p2ScissorsBTN(_ sender: UIButton) {
+        p2LBL.text = "SCISSORS"
+    }
 }
 

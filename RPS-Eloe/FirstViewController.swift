@@ -23,5 +23,16 @@ class FirstViewController: UIViewController {
     
     @IBOutlet weak var p1LBL: UILabel!
 
+    @IBAction func p1RockBTN(_ sender: UIButton) {
+        p1LBL.text = "ROCK"
+    }
+    
+    @IBAction func p1PaperBTN(_ sender: UIButton) {
+        p1LBL.text = "PAPER"
+    }
+    
+    @IBAction func p1ScissorsBTN(_ sender: UIButton) {
+        p1LBL.text = "SCISSORS"
+    }
 }
 
