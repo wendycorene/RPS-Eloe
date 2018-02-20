@@ -14,6 +14,7 @@
 		50A8193B203B913C001FF488 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50A8193A203B913C001FF488 /* Assets.xcassets */; };
 		50A8193E203B913C001FF488 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50A8193C203B913C001FF488 /* LaunchScreen.storyboard */; };
 		50A81946203B933E001FF488 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A81945203B933E001FF488 /* ResultsView.swift */; };
+		50A81948203B96BF001FF488 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A81947203B96BF001FF488 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		50A8193D203B913C001FF488 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50A8193F203B913C001FF488 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50A81945203B933E001FF488 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		50A81947203B96BF001FF488 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				50A81933203B913C001FF488 /* FirstViewController.swift */,
 				50A81935203B913C001FF488 /* SecondViewController.swift */,
 				50A81937203B913C001FF488 /* Main.storyboard */,
+				50A81947203B96BF001FF488 /* Model.swift */,
 				50A81945203B933E001FF488 /* ResultsView.swift */,
 				50A8193A203B913C001FF488 /* Assets.xcassets */,
 				50A8193C203B913C001FF488 /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50A81948203B96BF001FF488 /* Model.swift in Sources */,
 				50A81936203B913C001FF488 /* SecondViewController.swift in Sources */,
 				50A81946203B933E001FF488 /* ResultsView.swift in Sources */,
 				50A81932203B913C001FF488 /* AppDelegate.swift in Sources */,
