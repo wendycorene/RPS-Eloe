@@ -8,7 +8,7 @@
 
 import Foundation
 class ChoiceClass {
-    enum Choice: String {
+    enum Choice {
         case None
         case Rock
         case Paper
@@ -47,14 +47,15 @@ class ChoiceClass {
     func winner () -> String {
         switch player1Choice {
         case .None:
-            switch player2Choice {
+            /*switch player2Choice {
                 case .None:
                     return "It's a tie!"
                 default:
                     return "Player 2 wins!"
-            }
+            }*/
+            return "None"
         case .Rock:
-            switch player2Choice {
+            /*switch player2Choice {
             case .None:
                 return "Player 1 wins!"
             case .Rock:
@@ -63,9 +64,10 @@ class ChoiceClass {
                 return "Player 2 wins!"
             case .Scissors:
                 return "Player 1 wins!"
-            }
+            }*/
+            return "Rock"
         case .Paper:
-            switch player2Choice {
+            /*switch player2Choice {
             case .None:
                 return "Player 1 wins!"
             case .Rock:
@@ -74,9 +76,10 @@ class ChoiceClass {
                 return "It's a tie!"
             case .Scissors:
                 return "Player 2 wins!"
-            }
+            }*/
+            return "paper"
         case .Scissors:
-            switch player2Choice {
+            /*switch player2Choice {
             case .None:
                 return "Player 1 wins!"
             case .Rock:
@@ -85,7 +88,8 @@ class ChoiceClass {
                 return "Player 1 wins!"
             case .Scissors:
                 return "It's a tie!"
-            }
+            }*/
+            return "Scissors"
         }
     }
 
