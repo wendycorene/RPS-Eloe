@@ -22,4 +22,6 @@ class ResultsView: UIViewController {
     }
     
 
+    @IBOutlet weak var resetBTN: UIButton!
+    
 }
