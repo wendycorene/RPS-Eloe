@@ -15,7 +15,7 @@ class ChoiceClass {
         case Scissors}
     var player1Choice: Choice = .None
     var player2Choice: Choice = .None
-    var winnerString: String = ""
+    //var winnerString: String = ""
 
     func reset(){
         player1Choice = .None
@@ -27,17 +27,17 @@ class ChoiceClass {
         var p2NotNone: Bool
         switch player1Choice {
         case .None:
-            return false
+            p1NotNone = false
         default:
             p1NotNone = true
         }
         switch player2Choice {
         case .None:
-            return false
+            p2NotNone = false
         default:
             p2NotNone = true
         }
-        if p1NotNone && p2NotNone {
+        if p1NotNone || p2NotNone {
             return true
         }
         else {
@@ -46,7 +46,7 @@ class ChoiceClass {
     }
 
     func winner () -> String {
-        /*switch player1Choice {
+        switch player1Choice {
         case .None:
             switch player2Choice {
                 case .None:
@@ -54,7 +54,6 @@ class ChoiceClass {
                 default:
                     return "Player 2 wins!"
             }
-            return "None"
         case .Rock:
             switch player2Choice {
             case .None:
@@ -66,7 +65,6 @@ class ChoiceClass {
             case .Scissors:
                 return "Player 1 wins!"
             }
-            return "Rock"
         case .Paper:
             switch player2Choice {
             case .None:
@@ -78,7 +76,6 @@ class ChoiceClass {
             case .Scissors:
                 return "Player 2 wins!"
             }
-            return "paper"
         case .Scissors:
             switch player2Choice {
             case .None:
@@ -90,9 +87,7 @@ class ChoiceClass {
             case .Scissors:
                 return "It's a tie!"
             }
-        }*/
-        winnerString = "WAT"
-        return winnerString
+        }
     }
 
     func choosePlayer1 (pick: Choice) {

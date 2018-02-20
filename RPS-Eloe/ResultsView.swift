@@ -21,12 +21,27 @@ class ResultsView: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        if AppDelegate.myModel.haveResult() {
+            player1Selection.text = "Player 1 chose \(AppDelegate.myModel.player1Choice)"
+            player2Selection.text = "Player 2 chose \(AppDelegate.myModel.player2Choice)"
+        }
+        else {
+            player1Selection.text = "Make your selection in the other tab"
+            player2Selection.text = "Make your selection in the other tab"
+        }
+        
+    }
+    
+    @IBOutlet weak var player1Selection: UILabel!
     @IBOutlet weak var resetLBL: UILabel!
-
+    @IBOutlet weak var player2Selection: UILabel!
+    
     @IBAction func resetBTN(_ sender: UIButton) {
         AppDelegate.myModel.reset()
         resetLBL.text = "You have reset"
+        player1Selection.text = "Make your selection in the other tab"
+        player2Selection.text = "Make your selection in the other tab"
     }
     
     @IBAction func resultsBTN(_ sender: UIButton) {
