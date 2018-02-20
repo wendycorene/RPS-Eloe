@@ -20,16 +20,21 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    let myModel = AppDelegate.myModel
+    
     @IBOutlet weak var p2LBL: UILabel!
 
     @IBAction func p2RockBTN(_ sender: UIButton) {
         p2LBL.text = "ROCK"
+        myModel?.choosePlayer2(pick: .Rock)
     }
     @IBAction func p2PaperBTN(_ sender: UIButton) {
         p2LBL.text = "PAPER"
+        myModel?.choosePlayer2(pick: .Paper)
     }
     @IBAction func p2ScissorsBTN(_ sender: UIButton) {
         p2LBL.text = "SCISSORS"
+        myModel?.choosePlayer2(pick: .Scissors)
     }
 }
 

@@ -81,10 +81,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mex-4E-0mj">
-                                <rect key="frame" x="168" y="257" width="39" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPF-Mn-bdP">
+                                <rect key="frame" x="168" y="277" width="39" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetBTN:" destination="Jzh-kf-FFn" eventType="touchUpInside" id="CSY-cP-spU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zad-Vg-xGL">
+                                <rect key="frame" x="162" y="388" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Results"/>
+                                <connections>
+                                    <action selector="resultsBTN:" destination="Jzh-kf-FFn" eventType="touchUpInside" id="LoT-PZ-zBP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -92,7 +103,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Results" image="results" id="awS-GD-PKq"/>
                     <connections>
-                        <outlet property="resetBTN" destination="mex-4E-0mj" id="PU6-1V-XDE"/>
+                        <outlet property="resetLBL" destination="r49-L6-zP2" id="aye-2w-Hlz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jOd-KS-IAd" userLabel="First Responder" sceneMemberID="firstResponder"/>

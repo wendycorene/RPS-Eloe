@@ -22,6 +22,15 @@ class ResultsView: UIViewController {
     }
     
 
-    @IBOutlet weak var resetBTN: UIButton!
+    @IBOutlet weak var resetLBL: UILabel!
+    let myModel = AppDelegate.myModel
+
+    @IBAction func resetBTN(_ sender: UIButton) {
+        myModel?.reset()
+        resetLBL.text = "You have reset"
+    }
     
+    @IBAction func resultsBTN(_ sender: UIButton) {
+        resetLBL.text = myModel?.winner()
+    }
 }
